@@ -218,3 +218,22 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# demo data and local databases (fixtures/ is committed on purpose)
+data/
+*.duckdb
+*.duckdb.wal
+
+# Real complaint narratives and their derived records are local-only.
+act3_nhtsa/sample_300.csv
+fixtures/act3.jsonl
+
+# Credentials, workstation configuration and publication artefacts.
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+.codex/
+.agents/
+public-release/
