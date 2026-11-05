@@ -1,0 +1,13 @@
+title = "Decision demo: standard rules with request-hash recognition"
+
+[extend]
+useDefault = true
+
+# These fields are truncated SHA-256 cache identities, not credentials.
+# Match only the complete JSON key assignment; other fields remain scanned.
+[[rules]]
+id = "generic-api-key"
+[[rules.allowlists]]
+description = "Reviewed JSON request hashes"
+regexTarget = "match"
+regexes = ['''^"?key"?:\s*"[0-9a-f]{20}"$''']
